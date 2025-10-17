@@ -63,3 +63,4 @@ def main():
     elisa.printa()
 if __name__ == "__main__":
     main()
+#non è stato usato il polimorfismo sorry!!
