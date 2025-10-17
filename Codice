@@ -1,1 +1,65 @@
-
+class Persona:
+    def __init__(self,nome,cognome,eta):
+        self.nome = nome
+        self.cognome = cognome
+        self.eta = eta
+    def descrivi(self):
+        print(f"Nome: {self.nome}, cognome: {self.cognome}, eta: {self.eta}")
+class Studente(Persona):
+    def __init__(self,nome,cognome,eta,corso_di_laurea,voti):
+        super().__init__(nome,cognome,eta)
+        self.corso_di_laurea = corso_di_laurea
+        self.voti = voti
+    def printa(self):
+        print(f"Nome: {self.nome}, cognome: {self.cognome}, eta: {self.eta}, corso_di_laurea: {self.corso_di_laurea}, voti: {self.voti}")
+class Professore(Persona):
+    def __init__(self,nome,cognome,eta,materia_insegnata,anni_di_esperienza):
+        super().__init__(nome,cognome,eta)
+        self.materia_insegnata = materia_insegnata
+        self.anni_di_esperienza = anni_di_esperienza
+    def printa(self):
+        print(f"Nome: {self.nome}, cognome: {self.cognome}, eta: {self.eta}, materia_insegnata: {self.materia_insegnata}, anni di esperienza: {self.anni_di_esperienza}")
+class Ricercatore(Persona):
+    def __init__(self,nome,cognome,eta,campo_di_ricerca,progetti):
+        super().__init__(nome,cognome,eta)
+        self.campo_di_ricerca = campo_di_ricerca
+        self.progetti = progetti
+    def printa(self):
+        print(f"Nome: {self.nome},cognome: {self.cognome}, eta: {self.eta}, campo di ricerca: {self.campo_di_ricerca}, progetti: {self.progetti}")
+class Segretario(Persona):
+    def __init__(self,nome,cognome,eta,ufficio,telefono):
+        super().__init__(nome,cognome,eta)
+        self.ufficio = ufficio
+        self.telefono = telefono
+    def printa(self):
+        print(f"Nome: {self.nome}, cognome: {self.cognome}, eta: {self.eta}, ufficio: {self.ufficio}, telefono: {self.telefono}")
+class Tecnico(Persona):
+    def __init__(self,nome,cognome,eta,reparto,strumenti):
+        super().__init__(nome,cognome,eta)
+        self.reparto = reparto
+        self.strumenti = strumenti
+    def printa(self):
+        print(f"Nome: {self.nome},cognome: {self.cognome},eta: {self.eta}, reparto: {self.reparto}, strumenti: {self.strumenti}")
+def main():
+    mario=Studente("Mario","Rossi",21,"Informatica",[28,30,27])
+    giulia=Studente("Giulia","Bianchi",22,"Ingegneria Gestionale",[30,26,29])
+    mario.printa()
+    giulia.printa()
+    anna=Professore("Anna","Verdi",45,"Matematica",20)
+    luca=Professore("Luca","Neri",50,"Fisica",25)
+    anna.printa()
+    luca.printa()
+    fabio=Ricercatore("Fabio","Gialli",35,"Intelligenza Artificiale",["ChatBot","Vision AI"])
+    sara=Ricercatore("Sara","Blu",38,"Robotica",["Drone","Braccio Robotico"])
+    fabio.printa()
+    sara.printa()
+    carla=Segretario("Carla","Neri",40,"A1","0123456789")
+    paolo=Segretario("Paolo","Rossi",42,"B2","0987654321")
+    carla.printa()
+    paolo.printa()
+    marco=Tecnico("Marco","Gialli",30,"Laboratorio",["Microscopio","Oscilloscopio"])
+    elisa=Tecnico("Elisa","Marrone",28,"Informatica",["Server","Router"])
+    marco.printa()
+    elisa.printa()
+if __name__ == "__main__":
+    main()
