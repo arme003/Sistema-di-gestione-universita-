@@ -52,8 +52,11 @@ def main():
     Segretario("Paolo","Rossi",42,"B2","0987654321"),
     Tecnico("Marco","Gialli",30,"Laboratorio",["Microscopio","Oscilloscopio"]),
     Tecnico("Elisa","Marrone",28,"Informatica",["Server","Router"])]
+    contatore=0
     for persona in persone:
         persona.printa()
+        contatore=contatore+1
+    print(f"All'università ci sono {contatore} persone")
 
 if __name__ == "__main__":
     main()
