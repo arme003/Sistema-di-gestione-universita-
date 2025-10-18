@@ -41,26 +41,19 @@ class Tecnico(Persona):
     def printa(self):
         print(f"Nome: {self.nome},cognome: {self.cognome},eta: {self.eta}, reparto: {self.reparto}, strumenti: {self.strumenti}")
 def main():
-    mario=Studente("Mario","Rossi",21,"Informatica",[28,30,27])
-    giulia=Studente("Giulia","Bianchi",22,"Ingegneria Gestionale",[30,26,29])
-    mario.printa()
-    giulia.printa()
-    anna=Professore("Anna","Verdi",45,"Matematica",20)
-    luca=Professore("Luca","Neri",50,"Fisica",25)
-    anna.printa()
-    luca.printa()
-    fabio=Ricercatore("Fabio","Gialli",35,"Intelligenza Artificiale",["ChatBot","Vision AI"])
-    sara=Ricercatore("Sara","Blu",38,"Robotica",["Drone","Braccio Robotico"])
-    fabio.printa()
-    sara.printa()
-    carla=Segretario("Carla","Neri",40,"A1","0123456789")
-    paolo=Segretario("Paolo","Rossi",42,"B2","0987654321")
-    carla.printa()
-    paolo.printa()
-    marco=Tecnico("Marco","Gialli",30,"Laboratorio",["Microscopio","Oscilloscopio"])
-    elisa=Tecnico("Elisa","Marrone",28,"Informatica",["Server","Router"])
-    marco.printa()
-    elisa.printa()
+    persone=[
+    Studente("Mario","Rossi",21,"Informatica",[28,30,27]),
+    Studente("Giulia","Bianchi",22,"Ingegneria Gestionale",[30,26,29]),
+    Professore("Anna","Verdi",45,"Matematica",20),
+    Professore("Luca","Neri",50,"Fisica",25),
+    Ricercatore("Fabio","Gialli",35,"Intelligenza Artificiale",["ChatBot","Vision AI"]),
+    Ricercatore("Sara","Blu",38,"Robotica",["Drone","Braccio Robotico"]),
+    Segretario("Carla","Neri",40,"A1","0123456789"),
+    Segretario("Paolo","Rossi",42,"B2","0987654321"),
+    Tecnico("Marco","Gialli",30,"Laboratorio",["Microscopio","Oscilloscopio"]),
+    Tecnico("Elisa","Marrone",28,"Informatica",["Server","Router"])]
+    for persona in persone:
+        persona.printa()
+
 if __name__ == "__main__":
     main()
-#non è stato usato il polimorfismo sorry!!
